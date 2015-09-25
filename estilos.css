@@ -1,0 +1,66 @@
+ *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background: url("backgnd.png") no-repeat center center;
+            background-size: cover;
+        }
+        nav{
+            background: #C2185B;
+            height: 20px;
+        }
+        div>button{
+            float: left;
+            width: 30px;
+            height: 30px;
+            background: #E91E63;
+            border: none;
+            outline: 0;
+            outline-style: none;
+            outline-width: 0;
+        }
+        div>button:active{
+            width: 29px;
+            height: 29px;
+        }
+        div>button>img{
+            -webkit-filter: invert(1);
+        }
+        
+        #titulo{
+            background: #E91E63;
+            height: 100px;
+            width: 100%;
+            text-align: center;
+            font-family: Roboto;
+            padding-top: 10%;
+            padding-bottom: 10%;
+        }
+            #titulo>h1{
+                font-size: 40px;
+                font-weight: 100;
+                color: white;
+            }
+        #boton{
+            margin-top: 60%;
+            margin-left: 60%;
+            border-radius: 50%;
+            width: 25%;
+            float: center;
+            overflow: hidden;
+            background: #03A9F4;
+            border: none;
+            box-shadow: 2px 2px 5px gray;
+            outline: 0;
+            outline-style: none;
+            outline-width: 0;
+        }
+            button>img{
+                max-width: 100%;
+            }
+       #boton:active{
+           border:none;
+           margin-top: 60.5%;
+           background-color: white;
+        }
