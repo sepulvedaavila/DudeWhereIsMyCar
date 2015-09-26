@@ -5,32 +5,40 @@
         <meta name="viewport" content="width=device-width, user-scallable=no">
         <link href="estilos.css" rel="stylesheet" type="text/css">
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
+        <script src="angular.min.js"></script>
+        <script src="funcs_ang.js"></script>
     </head>
     
-    <body>
+    <body ng-app="MyApp">
          <nav></nav>
-        <div><button onclick="verMenu()"><img src="dots.png"></button></div>
+        <div><button id="hamburguesa" onclick="verMenu()"><img src="hamburguesa.png"></button><button id="dots"><img src="dots.png"></button></div>
+        <div id="park-field">
         <div id="titulo">
-                <h1>Aquí me<br> estacioné</h1>
+                <h1>Aquí me<br>estacioné</h1>
         </div>
+        <img src="Ok_tick.png" id="paloma">
         <button id='boton' onclick="estacionar()"><img src="carro.png"></button>
-        
+        <button id='s-boton' onclick="buscar()"><img src="Search.png"></button></div>
     </body>
-
+    
     <script>
         window.addEventListener('load',inicializar, true);
         
         function inicializar(){
             boton = document.getElementById('boton');
-            
             anchuraBoton = boton.offsetWidth;
             boton.style.height = anchuraBoton + "px"; 
         }
-        
         function estacionar(){
             navigator.geolocation.getCurrentPosition(localizacion);
+            pal = document.getElementById('paloma');
+            anchoPal = pal.offsetWidth;
+            pal.style.zIndex = "10";
+            pal.style.height = anchoPal;
+            pal.style.visibility = "initial";
+            document.getElementById('boton').style.visibility = 'hidden';
+            document.getElementById('s-boton').style.visibility='visible';
         }
-        
         function localizacion(pos){
             long = pos.coords.longitude;
             lat = pos.coords.latitude;
@@ -38,6 +46,9 @@
             localStorage.setItem('long', long);
             localStorage.setItem('lat', lat);
             localStorage.setItem('grados', grados);
+        }
+        function buscar(){
+            alert("Busquemos!");
         }
     </script>
 </html>

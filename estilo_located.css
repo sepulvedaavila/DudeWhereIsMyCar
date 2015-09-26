@@ -1,0 +1,12 @@
+ *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background: url("backgnd.png") no-repeat center center;
+            background-size: cover;
+        }
+        nav{
+            background: #C2185B;
+            height: 20px;
+        }
